@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Work sans", sans-serif;
+}
+
+body{
+    background: #DFDFDE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+main.cards{
+    display: flex;
+
+
+}
+
+main.cards section.card{
+    display: flex;
+    align-items: center;
+    background: #ffff;
+    margin-left: 30px;
+    flex-direction: column;
+    border-radius: 8px;
+    text-align: center;
+    padding: 3rem 1rem;
+    
+}
+
+main.cards section.card .image{
+    width: 64px;
+    height: 64px;
+}
+main.cards section.card img{
+    width: 100%;
+}
+
+main.cards section.card button{
+    margin-top: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 30px 60px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: color 1s;
+
+}
+main.cards section.card button.shop:hover{
+    background: linear-gradient(45deg, #B1D0E0, #9AD0EC)
+
+}
+main.cards section.card button.shop::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 0;
+    height: 100%;
+    background-color: #ffff;
+    transform: skewX(35deg);
+    z-index: -1;
+    transition: width 1s;
+
+}
+
+main.cards section.card button.shop:hover::before{
+    width: 150%;
+}
+
