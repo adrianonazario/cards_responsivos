@@ -29,7 +29,12 @@ main.cards section.card{
     border-radius: 8px;
     text-align: center;
     padding: 3rem 1rem;
+    max-height: 256px;
     
+}
+
+main.cards section.card:first-child{
+    margin-left: 0;
 }
 
 main.cards section.card .image{
@@ -40,37 +45,51 @@ main.cards section.card img{
     width: 100%;
 }
 
+main.cards section.card h3 {
+    font-size: 100%;
+    margin: 16px 0;
+}
+
+main.cards section.card span {
+    font-weight: 300;
+    max-width: 250px;  /* faz quebrar o texto*/
+    font-size: 80%;
+    margin-bottom: 16px;
+}
+
 main.cards section.card button{
-    margin-top: 15px;
-    text-decoration: none;
+    padding: 0.5rem 1rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    padding: 30px 60px;
+    border-radius: 32px;
+    border: 0;
     cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: color 1s;
-
-}
-main.cards section.card button.shop:hover{
-    background: linear-gradient(45deg, #B1D0E0, #9AD0EC)
-
-}
-main.cards section.card button.shop::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -50px;
-    width: 0;
-    height: 100%;
-    background-color: #ffff;
-    transform: skewX(35deg);
-    z-index: -1;
-    transition: width 1s;
-
+    font: 80%;
+    font-weight: 500;
+    color: #fff;
 }
 
-main.cards section.card button.shop:hover::before{
-    width: 150%;
+
+main.cards section.card.contact button {
+    background: linear-gradient(to right, #9f66ff, #Dfcbff);
 }
 
+main.cards section.card.shop button {
+    background: linear-gradient(to right, #3e8aff, #bbdeff);
+}
+
+main.cards section.card.about button {
+    background: linear-gradient(to right, #fe5f8f, #ffc7d9);
+}
+
+
+main.cards section.card.contact {
+    box-shadow: 20px 20px 50px -30px #dbc4ff;
+}
+
+main.cards section.card.shop {
+    box-shadow: 20px 20px 50px -30px #afd6ff;
+}
+
+main.cards section.card.about {
+    box-shadow: 20px 20px 50px -30px #dbc4ff;
+}
